@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Picker - วันนี้กินอะไรดี ในงบที่มี</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- กล่องแจ้งเตือนแบบเรียลไทม์ -->
+  <div id="toast" class="toast"></div>
+
+  <div class="container">
+    <!-- 1.1 ชื่อเว็บไซต์ ตรงกลาง ด้านบน -->
+    <header class="header">
+      <h1 class="site-title">Menu Picker</h1>
+      <p class="site-subtitle">" วันนี้กินอะไรดี ในงบที่มี "</p>
+    </header>
+
+    <!-- ส่วนกำหนดเงื่อนไข (งบประมาณ และ หมวดหมู่อาหาร) -->
+    <section class="filter-section">
+      <div class="form-group">
+        <label for="budgetInput">จำนานเงิน (บาท):</label>
+        <input type="number" id="budgetInput" placeholder="กรอกจำนวนเงิน เช่น 50" min="0">
+        <p class="site-subtitle">"ถ้าไม่จำกัดจบ ไม่ต้องกรอกจำนวนเงิน"</p>
+      </div>
+
+      <div class="form-group">
+        <label for="categorySelect">หมวดอาหาร:</label>
+        <select id="categorySelect">
+          <option value="all">ทุกหมวดหมู่</option>
+          <option value="อาหารจานเดียว">อาหารจานเดียว / ตามสั่ง</option>
+          <option value="ก๋วยเตี๋ยว">ก๋วยเตี๋ยว / เส้น</option>
+          <option value="กับข้าว/แกง">ต้ม แกง กับข้าว</option>
+          <option value="ฟาสต์ฟู้ด">ฟาสต์ฟู้ด / กินเล่น</option>
+          <option value="เครื่องดื่ม/ของหวาน">เครื่องดื่ม / ของหวาน</option>
+        </select>
+      </div>
+
+      <button id="randomBtn" class="btn-primary">สุ่มเมนู</button>
+    </section>
+
+    <!-- ส่วนแสดงผลเมนู -->
+    <section class="result-section" id="resultCard">
+      <h2 class="result-title">เมนูของคุณ</h2>
+      
+      <div class="food-image-wrapper">
+        <img id="foodImage" src="https://scontent.fbkk22-4.fna.fbcdn.net/v/t1.15752-9/837567627_1176966728228641_4957140847453348624_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeFph44zRkb0d-VhNdw9RYwu00hqrlIbjjrTSGquUhuOOtF-P3I2DKRRjpx6kfkTVR91meQff6d3M5fj9ccDvhF3&_nc_ohc=VfpsQWSvKnMQ7kNvwH48IvR&_nc_oc=AdpjIpD7CMblkM6T12AA9DjhdRSF-eoxlQx2lTWr02HIPudBtQsCNn86Azu7zDmiF2g&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fbkk22-4.fna&_nc_ss=7a22e&oh=03_Q7cD6gEoFS7Zkcc6-mCsrY-Imh6z6k8_awNIvfp7bjs9-0M4BQ&oe=6AEDD730" alt="รูปภาพของอาหาร">
+      </div>
+
+      <div class="menu-details">
+        <h3 id="menuName">กดปุ่มสุ่มเมนูเพื่อเริ่มค้นหา</h3>
+        <p id="menuPrice" class="menu-price">-</p>
+        <p id="menuCategory" class="menu-category">-</p>
+      </div>
+
+      <!-- ปุ่มดำเนินการ: สุ่มใหม่ด้านซ้าย | บันทึกเป็นเมนูโปรดด้านขวา -->
+      <div class="action-buttons">
+        <button id="reRandomBtn" class="btn-secondary">สุ่มใหม่</button>
+        <button id="saveFavoriteBtn" class="btn-favorite">บันทึกเป็นเมนูโปรด</button>
+      </div>
+      <br>
+        <p class="site-subtitle">"ถ้าสุ่มเมนูใหม่ไม่ได้กรุณา เพิ่ม-ลด จำนวนเงิน"</p>
+    </section>
+
+    <!-- ส่วนแสดงเมนูโปรดที่บันทึกไว้ (อัปเดตแบบเรียลไทม์) -->
+    <section class="favorites-section">
+      <div class="favorites-header">
+        <h3>⭐ เมนูโปรดของคุณ <span id="favCount" class="badge">0</span></h3>
+        <button id="clearAllFavBtn" class="btn-clear" title="ล้างรายการทั้งหมด">ล้างทั้งหมด</button>
+      </div>
+      <ul id="favoritesList" class="favorites-list">
+        <li class="empty-text">ยังไม่มีเมนูโปรดที่บันทึกไว้</li>
+      </ul>
+      
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
