@@ -11,29 +11,30 @@
   <div id="toast" class="toast"></div>
 
   <div class="container">
-    <!-- 1.1 ชื่อเว็บไซต์ ตรงกลาง ด้านบน -->
+    <!-- 1.1 ชื่อเว็บไซต์ -->
     <header class="header">
       <h1 class="site-title">Menu Picker</h1>
       <p class="site-subtitle">" วันนี้กินอะไรดี ในงบที่มี "</p>
     </header>
 
-    <!-- ส่วนกำหนดเงื่อนไข (งบประมาณ และ หมวดหมู่อาหาร) -->
+    <!-- ส่วนกำหนดเงื่อนไข (งบประมาณ และ ประเภทอาหาร) -->
     <section class="filter-section">
       <div class="form-group">
         <label for="budgetInput">จำนานเงิน (บาท):</label>
         <input type="number" id="budgetInput" placeholder="กรอกจำนวนเงิน เช่น 50" min="0">
-        <p class="site-subtitle">"ถ้าไม่จำกัดจบ ไม่ต้องกรอกจำนวนเงิน"</p>
+        <p class="site-subtitle">"ถ้าไม่จำกัดงบ ไม่ต้องกรอกจำนวนเงิน"</p>
       </div>
 
       <div class="form-group">
-        <label for="categorySelect">หมวดอาหาร:</label>
+        <label for="categorySelect">ประเภทอาหาร:</label>
         <select id="categorySelect">
-          <option value="all">ทุกหมวดหมู่</option>
+          <option value="all">ทุกประเภท</option>
           <option value="อาหารจานเดียว">อาหารจานเดียว / ตามสั่ง</option>
           <option value="ก๋วยเตี๋ยว">ก๋วยเตี๋ยว / เส้น</option>
-          <option value="กับข้าว/แกง">ต้ม แกง กับข้าว</option>
+          <option value="กับข้าว/แกง">ต้ม/แกง/กับข้าว</option>
           <option value="ฟาสต์ฟู้ด">ฟาสต์ฟู้ด / กินเล่น</option>
-          <option value="เครื่องดื่ม/ของหวาน">เครื่องดื่ม / ของหวาน</option>
+          <option value="ของหวาน">ของหวาน</option>
+          <option value="เครื่องดื่ม">เครื่องดื่ม</option>
         </select>
       </div>
 
@@ -49,7 +50,7 @@
       </div>
 
       <div class="menu-details">
-        <h3 id="menuName">กดปุ่มสุ่มเมนูเพื่อเริ่มค้นหา</h3>
+        <h3 id="menuName">ชื่อเมนู</h3>
         <p id="menuPrice" class="menu-price">-</p>
         <p id="menuCategory" class="menu-category">-</p>
       </div>
