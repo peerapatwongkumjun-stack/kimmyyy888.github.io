@@ -37,12 +37,15 @@ const foodList = [
   { name: "พิซซ่าชีสมินิ", price: 99, category: "ฟาสต์ฟู้ด", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUFy32f3-pngYH2LeX4wkvyPNiB8EaqsYshqhS3hf1-A&s=10" },
   { name: "เบอร์เกอร์เนื้อ", price: 50, category: "ฟาสต์ฟู้ด", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxzcsEL_NZ32zRFGRKinJubxFjs4Wtv5WXeUe18WZSfQ&s=10" },
 
-  // หมวด: เครื่องดื่ม / ของหวาน
-  { name: "ชานมไข่มุกบราวน์ชูการ์", price: 45, category: "เครื่องดื่ม/ของหวาน", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThk1WT-68rGtxUT1KTbMXoNmvNtszuPpRY5Jv-HbIIRikiqtMMB2WSwQs&s=10" },
-  { name: "บิงซูผลไม้รวมเกล็ดหิมะ", price: 69, category: "เครื่องดื่ม/ของหวาน", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZUotnmTXvboIRDoyDj9E1K3gZHswvr1wd8Sq2NxAJFw&s=10" },
-  { name: "ข้าวเหนียวมะม่วงอกร่อง", price: 79, category: "เครื่องดื่ม/ของหวาน", image: "https://blog.hungryhub.com/wp-content/uploads/2022/04/fresh-ripe-mango-sticky-rice-with-coconut-milk-dark-surface-1024x683.jpg" },
-  { name: "ชาเขียวมัทฉะลาเต้เย็น", price: 50, category: "เครื่องดื่ม/ของหวาน", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStrZ1bh0GznAhXke_2mxnZ_CkUcbNFtTIPZLgDJNZZ4Q&s=10" },
-  { name: "โรตีกล้วยหอมราดช็อกโกแลต", price: 40, category: "เครื่องดื่ม/ของหวาน", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDoMlldEZTbexVc0P7aC3XKmkuKNpesz0cqLUB29Q40A&s=10" }
+  // หมวด: ของหวาน
+  { name: "บิงซูผลไม้รวมเกล็ดหิมะ", price: 69, category: "ของหวาน", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZUotnmTXvboIRDoyDj9E1K3gZHswvr1wd8Sq2NxAJFw&s=10" },
+  { name: "ข้าวเหนียวมะม่วงอกร่อง", price: 79, category: "ของหวาน", image: "https://blog.hungryhub.com/wp-content/uploads/2022/04/fresh-ripe-mango-sticky-rice-with-coconut-milk-dark-surface-1024x683.jpg" },
+  { name: "โรตีกล้วยหอมราดช็อกโกแลต", price: 40, category: "ของหวาน", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDoMlldEZTbexVc0P7aC3XKmkuKNpesz0cqLUB29Q40A&s=10" },
+
+  // หมวด: เครื่องดื่ม 
+  { name: "ชานมไข่มุกบราวน์ชูการ์", price: 45, category: "เครื่องดื่ม", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThk1WT-68rGtxUT1KTbMXoNmvNtszuPpRY5Jv-HbIIRikiqtMMB2WSwQs&s=10" },
+  { name: "ชาเขียวมัทฉะลาเต้เย็น", price: 50, category: "เครื่องดื่ม", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStrZ1bh0GznAhXke_2mxnZ_CkUcbNFtTIPZLgDJNZZ4Q&s=10" },
+  { name: "ชาไทยปั่นหวานมากๆๆๆ", price: 40, category: "เครื่องดื่ม", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCohGCQ7khHDenYKcXnoE9T7JCQ-mggojXaXSD6LZv7w&s=10"}
 ];
 
 // เก็บสถานะเมนูปัจจุบัน
